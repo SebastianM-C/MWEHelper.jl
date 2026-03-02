@@ -45,6 +45,8 @@ This should both raise an error and also serve as a potential test case for pack
 This package uses CodeTracking.jl to introspect the MWE dependencies. It is recommended to load Revise.jl
 if you have the mwe defined only in the REPL.
 
+This package also requires Julia 1.12 or later.
+
 ### Disclaimer
 
 This package is experimental (especially the introspection parts that grab the mwe dependencies)
