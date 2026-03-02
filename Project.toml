@@ -1,0 +1,26 @@
+name = "MWEHelper"
+uuid = "7503362a-2215-4c13-bb0a-76012a62d402"
+version = "0.1.0"
+authors = ["Sebastian Micluța-Câmpeanu <sebastian.mc95@proton.me>"]
+
+[deps]
+CodeTracking = "da1fd8a2-8d9e-5ec2-8556-3022fb5608a2"
+InteractiveUtils = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+MethodAnalysis = "85b6ec6f-f7df-4429-9514-a64bcd9ee824"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+
+[compat]
+CodeTracking = "3.0.0"
+InteractiveUtils = "1.11.0"
+MethodAnalysis = "1.0.0"
+Pkg = "1"
+
+[extras]
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+ModelingToolkitBase = "7771a370-6774-4173-bd38-47e70ca0b839"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "Logging", "ModelingToolkitBase", "SymbolicUtils", "Symbolics"]
