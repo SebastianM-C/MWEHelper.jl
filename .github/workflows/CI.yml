@@ -12,11 +12,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        channel: ['1.11', '1.12', 'beta']
+        channel: ["1.11", "1.12", "beta"]
     steps:
       - uses: actions/checkout@v4
       - uses: julia-actions/install-juliaup@v3
         with:
           channel: ${{ matrix.channel }}
       - uses: julia-actions/cache@v2
-      - run: julia --project=@. -e 'using Pkg; Pkg.test()'
+      - run: julia +${{ matrix.channel }} --startup-file=no --color=yes --check-bounds=yes --compiled-modules=yes --depwarn=yes --project=@. -e 'using Pkg; Pkg.test()'
